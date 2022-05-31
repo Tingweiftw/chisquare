@@ -1,8 +1,8 @@
-FROM python:3.7
+FROM python:3.10
 
 RUN apt-get update -y && \
-    apt-get install -y python-numpy\
-    python-numpy python-scipy &&\
+    apt-get install -y python3-numpy\
+    python3-numpy python3-scipy &&\
     apt-get clean && rm -rf /var/lib/apt/lists/*
 
 WORKDIR /code
